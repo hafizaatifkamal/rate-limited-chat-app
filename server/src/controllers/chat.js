@@ -13,7 +13,7 @@ const postMessage = async (req, res) => {
     wsService.broadcastMessage({ sender, content, timestamp });
 
     res
-      .status(200)
+      .status(201)
       .json({ success: true, message: "Message sent successfully." });
   } catch (error) {
     res.status(400).json({ success: false, message: error.message });
